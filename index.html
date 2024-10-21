@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presupuesto de Cortado de Césped</title>
+    <title>Presupuesto de Corte de Césped</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Calcula tu presupuesto de cortado de césped</h1>
-        <form id="presupuesto-form">
-            <label for="metros-cuadrados">Metros cuadrados a cortar:</label>
-            <input type="number" id="metros-cuadrados" name="metros-cuadrados" placeholder="Ingresa los m²" required>
+        <h1>Presupuesto de Corte de Césped</h1>
+        <form id="budgetForm">
+            <label for="area">Tamaño del terreno (m²):</label>
+            <input type="number" id="area" name="area" required>
 
-            <label for="ubicacion">Ubicación de la casa:</label>
-            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ingresa la ubicación" required>
+            <label for="location">Ubicación de la casa:</label>
+            <input type="text" id="location" name="location" required>
 
-            <label for="foto-terreno">Sube una foto del terreno:</label>
-            <input type="file" id="foto-terreno" name="foto-terreno" accept="image/*" required>
+            <label for="photo">Subir una foto del terreno:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
 
-            <button type="submit">Calcular presupuesto</button>
+            <button type="submit">Calcular Presupuesto</button>
         </form>
 
-        <div id="resultado"></div>
+        <div id="result" class="result"></div>
+
+        <!-- Formulario para bookear el servicio, inicialmente oculto -->
+        <form id="bookingForm" style="display: none;">
+            <h2>Confirmar reserva</h2>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="button" id="confirmBooking">Confirmar y Reservar</button>
+        </form>
     </div>
 
     <script src="script.js"></script>
