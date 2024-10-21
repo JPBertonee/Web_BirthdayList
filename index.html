@@ -3,99 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio - Científico de Datos</title>
+    <title>Presupuesto de Cortado de Césped</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#quien-soy">Quien Soy</a></li>
-                <li><a href="#estudios">Estudios</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#herramientas">Herramientas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="quien-soy">
-        <h2>Quien Soy</h2>
-        <p>Soy un Científico de Datos apasionado por convertir datos en información valiosa. Mi objetivo es utilizar la ciencia de datos para resolver problemas complejos y mejorar la toma de decisiones.</p>
-        <img src="tu-imagen.jpg" alt="Tu Nombre" class="profile-pic">
-    </section>
-    
-    <section id="estudios">
-        <h2>Estudios</h2>
-        <div class="animated-text">
-            <span class="typed"></span>
-        </div>
-        <ul>
-            <li>Máster en Ciencia de Datos - Universidad XYZ</li>
-            <li>Licenciatura en Matemáticas - Universidad ABC</li>
-        </ul>
-    </section>
-    
-    <section id="experiencia">
-        <h2>Experiencia</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <h3>Analista de Datos - Empresa 1</h3>
-                <p>Descripción de tus responsabilidades y logros.</p>
-            </div>
-            <div class="timeline-item">
-                <h3>Científico de Datos - Empresa 2</h3>
-                <p>Descripción de tus responsabilidades y logros.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="proyectos">
-        <h2>Proyectos</h2>
-        <div class="gallery">
-            <div class="project">
-                <img src="proyecto1.jpg" alt="Proyecto 1">
-                <p>Descripción breve del proyecto 1.</p>
-            </div>
-            <div class="project">
-                <img src="proyecto2.jpg" alt="Proyecto 2">
-                <p>Descripción breve del proyecto 2.</p>
-            </div>
-            <!-- Agrega más proyectos según sea necesario -->
-        </div>
-    </section>
-    
-    <section id="herramientas">
-        <h2>Herramientas</h2>
-        <div class="tools">
-            <i class="fab fa-python"></i>
-            <i class="fab fa-r-project"></i>
-            <i class="fab fa-sass"></i>
-            <i class="fab fa-js-square"></i>
-            <!-- Agrega más herramientas según sea necesario -->
-        </div>
-    </section>
-    
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Tu Nombre" required>
-            <input type="email" placeholder="Tu Correo" required>
-            <textarea placeholder="Tu Mensaje" required></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-        <div id="tawk"></div>
-    </section>
+    <div class="container">
+        <h1>Calcula tu presupuesto de cortado de césped</h1>
+        <form id="presupuesto-form">
+            <label for="metros-cuadrados">Metros cuadrados a cortar:</label>
+            <input type="number" id="metros-cuadrados" name="metros-cuadrados" placeholder="Ingresa los m²" required>
 
-    <footer>
-        <p>© 2024 Tu Nombre. Todos los derechos reservados.</p>
-    </footer>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+            <label for="ubicacion">Ubicación de la casa:</label>
+            <input type="text" id="ubicacion" name="ubicacion" placeholder="Ingresa la ubicación" required>
+
+            <label for="foto-terreno">Sube una foto del terreno:</label>
+            <input type="file" id="foto-terreno" name="foto-terreno" accept="image/*" required>
+
+            <button type="submit">Calcular presupuesto</button>
+        </form>
+
+        <div id="resultado"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>

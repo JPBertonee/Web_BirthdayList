@@ -1,92 +1,62 @@
-* {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #f0f0f0, #e0e0e0);
-    color: #333;
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px 0;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-}
-
-section {
-    padding: 50px;
+h1 {
     text-align: center;
+    color: #4CAF50;
 }
 
-h2 {
-    margin-bottom: 20px;
+form {
+    display: flex;
+    flex-direction: column;
 }
 
-.profile-pic {
-    width: 150px;
-    border-radius: 50%;
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#resultado {
     margin-top: 20px;
-}
-
-.animated-text {
-    margin: 20px 0;
-}
-
-.timeline {
-    position: relative;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-.timeline-item {
-    position: relative;
-    margin: 20px 0;
-    padding: 20px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #e7f4e4;
+    border: 1px solid #4CAF50;
     border-radius: 5px;
-}
-
-.gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.project {
-    margin: 10px;
-    text-align: center;
-}
-
-.project img {
-    width: 200px;
-    border-radius: 5px;
-}
-
-.tools {
-    font-size: 30px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    display: none;
 }
