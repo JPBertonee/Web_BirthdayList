@@ -1,42 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presupuesto de Corte de Césped</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Pablo Bertone - Data Scientist</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <header>
     <div class="container">
-        <h1>Presupuesto de Corte de Césped</h1>
-        <form id="budgetForm">
-            <label for="area">Tamaño del terreno (m²):</label>
-            <input type="number" id="area" name="area" required>
-
-            <label for="location">Ubicación de la casa:</label>
-            <input type="text" id="location" name="location" required>
-
-            <label for="photo">Subir una foto del terreno:</label>
-            <input type="file" id="photo" name="photo" accept="image/*" required>
-
-            <button type="submit">Calcular Presupuesto</button>
-        </form>
-
-        <div id="result" class="result"></div>
-
-        <!-- Formulario para bookear el servicio, inicialmente oculto -->
-        <form id="bookingForm" style="display: none;">
-            <h2>Confirmar reserva</h2>
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="phone">Teléfono:</label>
-            <input type="tel" id="phone" name="phone" required>
-
-            <button type="button" id="confirmBooking">Confirmar y Reservar</button>
-        </form>
+      <h1>Juan Pablo Bertone</h1>
+      <h2>Ingeniero Industrial & Científico de Datos</h2>
+      <nav>
+        <ul>
+          <li><a href="#about">Sobre Mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#experience">Experiencia</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <script src="script.js"></script>
+  <section id="about">
+    <div class="container">
+      <h2>Sobre Mí</h2>
+      <p>Soy un Ingeniero Industrial y Científico de Datos apasionado por transformar datos en estrategias efectivas. Con experiencia en análisis estratégico, machine learning, y toma de decisiones, estoy comprometido a impulsar soluciones innovadoras.</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>Proyectos</h2>
+      <div class="project">
+        <h3>Steam Videogames Recommendation System</h3>
+        <p>Modelo de recomendación utilizando Python, FastAPI, y Scikit-learn. <a href="https://github.com/JPBertonee" target="_blank">Ver en GitHub</a></p>
+      </div>
+      <div class="project">
+        <h3>Análisis de Siniestros Viales CABA</h3>
+        <p>Análisis detallado utilizando Python y PowerBI para visualizar tendencias de accidentes de tránsito.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Juan Pablo Bertone. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
