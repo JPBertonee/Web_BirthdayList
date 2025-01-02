@@ -1,126 +1,85 @@
-/* General Styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  /* Header */
-  header {
-    background-color: #0066cc;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  header h1 {
-    font-size: 2.5em;
-    margin: 0;
-  }
-  
-  header h2 {
-    font-size: 1.2em;
-    font-weight: 300;
-  }
-  
-  /* Navigation */
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Sections */
-  section {
-    padding: 50px 20px;
-  }
-  
-  section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .project, .job {
-    margin-bottom: 20px;
-  }
-  
-  .project h3, .job h3 {
-    font-size: 1.5em;
-  }
-  
-  /* Form */
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  form label {
-    margin-bottom: 5px;
-  }
-  
-  form input, form textarea, form button {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 1em;
-  }
-  
-  form button {
-    background-color: #0066cc;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #004a99;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2em;
-    }
-  
-    header h2 {
-      font-size: 1em;
-    }
-  
-    nav ul li {
-      display: block;
-      margin: 10px 0;
-    }
-  
-    section h2 {
-      font-size: 1.8em;
-    }
-  
-    .container {
-      padding: 0 10px;
-    }
-  }
-  
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: #fef9e7;
+  color: #333;
+  text-align: center;
+}
+
+header {
+  background: url('https://i.imgur.com/9xYkGJp.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 30px 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+main {
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+form {
+  padding: 20px;
+}
+
+label, input, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.birthday-list {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.birthday-list li {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
