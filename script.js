@@ -1,15 +1,16 @@
-// Almacenar un cumpleaños en el localStorage
+// Función para agregar un cumpleaños al localStorage
 function addBirthdayToLocalStorage(name, date) {
   const birthdays = JSON.parse(localStorage.getItem('birthdays')) || [];
   birthdays.push({ name, date });
   localStorage.setItem('birthdays', JSON.stringify(birthdays));
+  loadBirthdaysFromLocalStorage(); // Recargar la lista después de agregar
 }
 
-// Obtener los cumpleaños desde el localStorage
+// Función para cargar los cumpleaños desde el localStorage
 function loadBirthdaysFromLocalStorage() {
   const birthdays = JSON.parse(localStorage.getItem('birthdays')) || [];
-  const table = document.getElementById('birthdayTable');
-  table.innerHTML = ''; // Limpiar tabla antes de mostrar los nuevos datos
+  const table = document.getElementById('birthdayTable').getElementsByTagName('tbody')[0];
+  table.innerHTML = ''; // Limpiar la tabla antes de agregar los datos
 
   birthdays.forEach(birthday => {
     const row = table.insertRow();
@@ -20,20 +21,19 @@ function loadBirthdaysFromLocalStorage() {
   });
 }
 
-// Manejo del formulario y agregar cumpleaños
+// Función para manejar el clic en "Agregar cumpleaños"
 document.getElementById('addBirthday').addEventListener('click', function() {
   const name = document.getElementById('name').value;
   const date = document.getElementById('date').value;
 
   if (name && date) {
     addBirthdayToLocalStorage(name, date);
-    loadBirthdaysFromLocalStorage(); // Recargar los cumpleaños mostrados
-    document.getElementById('name').value = ''; // Limpiar campo de nombre
-    document.getElementById('date').value = ''; // Limpiar campo de fecha
+    document.getElementById('name').value = ''; // Limpiar campo nombre
+    document.getElementById('date').value = ''; // Limpiar campo fecha
   }
 });
 
-// Cargar los cumpleaños desde un archivo .ics
+// Función para manejar el clic en "Subir archivo .ics"
 document.getElementById('fileInput').addEventListener('change', function(event) {
   const file = event.target.files[0];
   if (file && file.name.endsWith('.ics')) {
@@ -47,7 +47,7 @@ document.getElementById('fileInput').addEventListener('change', function(event) 
   }
 });
 
-// Parsear el archivo .ics y extraer los cumpleaños
+// Función para parsear un archivo .ics y extraer los cumpleaños
 function parseICS(data) {
   const birthdays = [];
   const regex = /BEGIN:VEVENT[\s\S]*?SUMMARY:(.*?)\s*DTSTART;VALUE=DATE:(\d{8})/g;
@@ -62,15 +62,15 @@ function parseICS(data) {
   return birthdays;
 }
 
-// Formatear la fecha de cumpleaños en formato adecuado
+// Función para formatear las fechas en formato adecuado
 function formatDate(dateStr) {
   return `${dateStr.slice(6, 8)}/${dateStr.slice(4, 6)}/${dateStr.slice(0, 4)}`;
 }
 
-// Actualizar la lista de cumpleaños mostrada
+// Función para actualizar la lista de cumpleaños en la tabla
 function updateBirthdaysList(birthdays) {
-  const table = document.getElementById('birthdayTable');
-  table.innerHTML = ''; // Limpiar tabla antes de mostrar los nuevos datos
+  const table = document.getElementById('birthdayTable').getElementsByTagName('tbody')[0];
+  table.innerHTML = ''; // Limpiar la tabla antes de mostrar nuevos datos
 
   birthdays.forEach(birthday => {
     const row = table.insertRow();
@@ -80,11 +80,11 @@ function updateBirthdaysList(birthdays) {
     dateCell.textContent = birthday.date;
   });
 
-  // Guardar los cumpleaños cargados en localStorage para persistirlos
+  // Guardar los cumpleaños cargados en el localStorage
   localStorage.setItem('birthdays', JSON.stringify(birthdays));
 }
 
-// Cargar los cumpleaños almacenados en el localStorage cuando la página se carga
+// Cargar los cumpleaños almacenados al cargar la página
 window.onload = function() {
   loadBirthdaysFromLocalStorage();
 };
