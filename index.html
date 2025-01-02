@@ -3,125 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Juan Pablo Bertone - Data Scientist</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js"></script>
-  
+  <title>Birthday Calendar Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color: #fef9e7;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: url('https://res.cloudinary.com/dwyzrynk5/image/upload/v1735806080/baloons_wthzai.avif') no-repeat center center;
+      background-size: cover;
+      padding: 30px 20px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    main {
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    form {
+      padding: 20px;
+    }
+    label, input, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    input {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 0.9rem;
+    }
+    .birthday-list {
+      margin-top: 20px;
+      list-style-type: none;
+      padding: 0;
+    }
+    .birthday-list li {
+      margin: 5px 0;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>Juan Pablo Bertone</h1>
-      <h2>Ingeniero Industrial & Científico de Datos</h2>
-      <nav>
-        <ul>
-          <li><a href="#about">Sobre Mí</a></li>
-          <li><a href="#projects">Proyectos</a></li>
-          <li><a href="#experience">Experiencia</a></li>
-          <li><a href="#skills">Habilidades</a></li>
-          <li><a href="#contact">Contacto</a></li>
-        </ul>
-      </nav>
-    </div>
+    <h1>🎉 Birthday Calendar Generator 🎂</h1>
+    <p>Organiza todos tus cumpleaños en un clic</p>
   </header>
-
-  <section id="about">
+  <main>
     <div class="container">
-      <h2>Sobre Mí</h2>
-      <p>
-        Soy un Ingeniero Industrial y Científico de Datos apasionado por transformar datos en estrategias efectivas. 
-        Con experiencia en análisis estratégico, machine learning, y toma de decisiones, estoy comprometido a impulsar 
-        soluciones innovadoras en el ámbito empresarial.
-      </p>
-    </div>
-  </section>
-
-  <section id="projects">
-    <div class="container">
-      <h2>Proyectos</h2>
-  
-      <div class="project">
-        <h3>Steam Videogames Recommendation System</h3>
-        <p>
-          Modelo de recomendación utilizando Python, FastAPI, y Scikit-learn.  
-          <a href="https://github.com/JPBertonee/steam-recommendation-system" target="_blank">GitHub</a> | 
-          <a href="https://loom.com/share/steam-demo" target="_blank">Video en Loom</a> | 
-          <a href="https://steam-recommendation-system.render.com" target="_blank">Sitio Web</a>
-        </p>
-      </div>
-  
-      <div class="project">
-        <h3>Análisis de Siniestros Viales CABA</h3>
-        <p>
-          Análisis detallado utilizando Python y PowerBI para visualizar tendencias de accidentes de tránsito.  
-          <a href="https://github.com/JPBertonee/traffic-analysis" target="_blank">GitHub</a> | 
-          <a href="https://loom.com/share/traffic-analysis-demo" target="_blank">Video en Loom</a> | 
-          <a href="https://powerbi.com/dashboard/traffic-caba" target="_blank">Dashboard</a>
-        </p>
-      </div>
-    </div>
-  </section>
-  
-
-  <section id="experience">
-    <div class="container">
-      <h2>Experiencia</h2>
-      <div class="job">
-        <h3>Data Analyst Junior</h3>
-        <p><em>SanCor Salud Medicina Privada | Mar 2021 - Feb 2022</em></p>
-        <ul>
-          <li>Creación de dashboards estratégicos para la toma de decisiones.</li>
-          <li>Manejo de Google Looker Studio y Google Storage.</li>
-        </ul>
-      </div>
-      <div class="job">
-        <h3>Ingeniería en Mantenimiento</h3>
-        <p><em>MAHLE Argentina | Sept 2018 - Nov 2019</em></p>
-        <ul>
-          <li>Análisis de fallas y gestión de KPIs.</li>
-          <li>Proyectos de mejora de procesos y máquinas.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <div class="container">
-      <h2>Habilidades</h2>
-      <ul class="skills-list">
-        <li><i class="fas fa-database"></i> SQL, MySQL</li>
-        <li><i class="fab fa-python"></i> Python (Pandas, Numpy, Scikit-learn)</li>
-        <li><i class="fas fa-chart-line"></i> PowerBI, Tableau, Google Looker Studio</li>
-        <li><i class="fas fa-tools"></i> Excel Avanzado</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Contacto</h2>
-      <form>
+      <form id="birthdayForm">
         <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Mensaje:</label>
-        <textarea id="message" name="message" required></textarea>
-        <button type="submit">Enviar</button>
+        <input type="text" id="name" name="name" placeholder="Ejemplo: Juan">
+        <label for="date">Fecha de nacimiento:</label>
+        <input type="date" id="date" name="date">
+        <button type="button" id="addBirthday">Agregar cumpleaños</button>
       </form>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/jpbertone" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="https://github.com/JPBertonee" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-      </div>
+      <button type="button" id="generateICS">Generar archivo .ics</button>
+      <button type="button" id="uploadICS">Subir archivo .ics</button>
+      <input type="file" id="fileInput" accept=".ics" style="display: none;">
+      
+      <!-- Mostrar la lista de cumpleaños cargados -->
+      <ul class="birthday-list" id="birthdayList"></ul>
     </div>
-  </section>
-
+  </main>
   <footer>
-    <div class="container">
-      <p>© 2024 Juan Pablo Bertone. Todos los derechos reservados.</p>
-    </div>
+    Creado por Juan Pablo Bertone & ChatGPT © 2024
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
