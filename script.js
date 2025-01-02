@@ -85,4 +85,6 @@ function updateBirthdaysList(birthdays) {
 }
 
 // Cargar los cumpleaños almacenados en el localStorage cuando la página se carga
-loadBirthdaysFromLocalStorage();
+window.onload = function() {
+  loadBirthdaysFromLocalStorage();
+};
