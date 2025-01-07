@@ -50,8 +50,8 @@ Feel free to contribute to this project by submitting a pull request or opening 
 For any questions or suggestions, feel free to reach out! ✨
 
 - **Email**: [Send an email](mailto:bertonejpb@gmail.com)
-- **GitHub**: [Your GitHub Profile](https://github.com/JPBertonee)
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/jpbertone)
+- **GitHub**: [GitHub](https://github.com/JPBertonee)
+- **LinkedIn**: [LinkedIn Profile](https://www.linkedin.com/in/jpbertone)
 
 ---
 
