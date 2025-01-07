@@ -1,85 +1,295 @@
-body {
-  font-family: 'Montserrat', sans-serif;
+/* Estilo global */
+* {
   margin: 0;
-  background-color: #fef9e7;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Fondo y disposición general */
+body {
+  background: linear-gradient(135deg, #a5d6a7, #81c784); /* Tono de verde suave similar a los botones */
   color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
   text-align: center;
 }
 
-header {
-  background: url('https://i.imgur.com/9xYkGJp.jpg') no-repeat center center;
-  background-size: cover;
-  padding: 30px 20px;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-main {
-  padding: 20px;
-}
-
+/* Contenedor principal */
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  overflow: hidden;
+  background-color: white;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
 }
 
-form {
-  padding: 20px;
+/* Cabecera */
+header {
+  margin-bottom: 20px;
+  position: relative;
 }
 
-label, input, button {
-  display: block;
+h1 {
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1; /* Aseguramos que el título esté sobre la imagen */
+}
+
+/* Estilo de la imagen como fondo */
+.header-image {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Colocamos la imagen detrás del título */
+  border-radius: 10px;
+}
+
+/* Sección de formulario */
+.form-section {
+  background: #f8f8f8;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-section input,
+.form-section button {
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  width: 100%;
+}
+
+.form-section input {
+  background-color: #fff;
+}
+
+.form-section button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-section button:hover {
+  background-color: #ff4a3b;
+}
+
+.form-section button:active {
+  transform: translateY(2px);
+}
+
+/* Sección de lista de cumpleaños */
+.display-section {
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
   margin-bottom: 15px;
 }
 
-input {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-button {
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-footer {
-  margin-top: 20px;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 0.9rem;
-}
-
-.birthday-list {
-  margin-top: 20px;
+/* Estilo de la lista de cumpleaños */
+#birthdays-list {
   list-style-type: none;
   padding: 0;
 }
 
-.birthday-list li {
-  margin: 5px 0;
-  padding: 10px;
-  background-color: #f1f1f1;
-  border-radius: 4px;
+.birthday-item {
+  background-color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.birthday-item:hover {
+  transform: scale(1.02);
+}
+
+.delete-btn {
+  background-color: #ff4a3b;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #56c891;
+}
+
+.delete-btn:active {
+  transform: translateY(2px);
+}
+
+/* Sección de actualización de lista (botones de subir y seleccionar archivo) */
+.update-section {
+  margin-top: 20px;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.update-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-section label {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Botones en la sección de actualización */
+.upload-section button,
+.upload-section input[type="file"] {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.upload-section button {
+  background-color: #4caf50;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.upload-section button:hover {
+  background-color: #45a049;
+}
+
+.upload-section button:active {
+  transform: translateY(2px);
+}
+
+.upload-section input[type="file"]:active {
+  transform: translateY(2px);
+}
+
+/* Boton subir ics */
+
+#generate-ics {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#generate-ics:hover {
+  background-color: #45a049;
+}
+
+#generate-ics:active {
+  transform: translateY(2px);
+}
+
+
+/* Estilo para mensajes de confirmación */
+.confirmation-message {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  z-index: 999;
+  display: none;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+footer {
+  font-size: 1rem;
+  color: #aaa;
+  margin-top: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 10px 0;
+  background-color: white; /* Puedes agregar un fondo para asegurarte de que sea legible sobre otros elementos */
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .actions {
+    flex-direction: column;
+  }
+
+  .actions button, .actions input[type="file"] {
+    width: 100%;
+  }
+
+  .form-group {
+    flex-direction: column;
+  }
+  
+  .form-group input {
+    width: 100%;
+  }
+  
+  .header-image {
+    max-width: 150px; /* Ajuste para pantallas pequeñas */
+  }
 }
