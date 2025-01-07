@@ -1,4 +1,4 @@
-/* Estilo global */
+/* Global Style */
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +6,9 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Fondo y disposición general */
+/* Background and General Layout */
 body {
-  background: linear-gradient(135deg, #a5d6a7, #81c784); /* Tono de verde suave similar a los botones */
+  background: linear-gradient(135deg, #a5d6a7, #81c784); /* Soft green tone similar to buttons */
   color: #333;
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@ body {
   text-align: center;
 }
 
-/* Contenedor principal */
+/* Main Container */
 .container {
   background-color: white;
   width: 90%;
@@ -28,7 +28,7 @@ body {
   margin: 20px 0;
 }
 
-/* Cabecera */
+/* Header */
 header {
   margin-bottom: 20px;
   position: relative;
@@ -39,10 +39,10 @@ h1 {
   color: #ff6f61;
   margin-bottom: 10px;
   position: relative;
-  z-index: 1; /* Aseguramos que el título esté sobre la imagen */
+  z-index: 1; /* Ensure the title is above the image */
 }
 
-/* Estilo de la imagen como fondo */
+/* Image as Background Style */
 .header-image {
   width: 100%;
   height: 200px;
@@ -50,11 +50,11 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* Colocamos la imagen detrás del título */
+  z-index: -1; /* Place the image behind the title */
   border-radius: 10px;
 }
 
-/* Sección de formulario */
+/* Form Section */
 .form-section {
   background: #f8f8f8;
   border-radius: 8px;
@@ -93,7 +93,7 @@ h1 {
   transform: translateY(2px);
 }
 
-/* Sección de lista de cumpleaños */
+/* Birthday List Section */
 .display-section {
   margin-bottom: 30px;
 }
@@ -104,7 +104,7 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* Estilo de la lista de cumpleaños */
+/* Birthday List Style */
 #birthdays-list {
   list-style-type: none;
   padding: 0;
@@ -145,7 +145,7 @@ h2 {
   transform: translateY(2px);
 }
 
-/* Sección de actualización de lista (botones de subir y seleccionar archivo) */
+/* List Update Section (File Upload and Select Buttons) */
 .update-section {
   margin-top: 20px;
   background: #f8f8f8;
@@ -171,7 +171,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Botones en la sección de actualización */
+/* Buttons in Update Section */
 .upload-section button,
 .upload-section input[type="file"] {
   padding: 12px 20px;
@@ -200,8 +200,7 @@ h2 {
   transform: translateY(2px);
 }
 
-/* Boton subir ics */
-
+/* Generate ICS Button */
 #generate-ics {
   background-color: #4caf50;
   color: white;
@@ -221,8 +220,7 @@ h2 {
   transform: translateY(2px);
 }
 
-
-/* Estilo para mensajes de confirmación */
+/* Confirmation Message Style */
 .confirmation-message {
   background-color: #4caf50;
   color: white;
@@ -256,10 +254,10 @@ footer {
   transform: translateX(-50%);
   width: 100%;
   padding: 10px 0;
-  background-color: white; /* Puedes agregar un fondo para asegurarte de que sea legible sobre otros elementos */
+  background-color: white; /* You can add a background to ensure it is readable over other elements */
 }
 
-/* Media Queries para diseño responsivo */
+/* Media Queries for Responsive Design */
 @media (max-width: 600px) {
   .container {
     width: 95%;
@@ -290,6 +288,6 @@ footer {
   }
   
   .header-image {
-    max-width: 150px; /* Ajuste para pantallas pequeñas */
+    max-width: 150px; /* Adjust for smaller screens */
   }
 }
