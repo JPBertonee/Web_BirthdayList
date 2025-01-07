@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,35 +10,36 @@
     <div class="container">
         <header>
             <h1>Birthday Reminder 🎉</h1>
-            <p>¡Nunca olvides un cumpleaños importante!</p>
-            <img src="https://res.cloudinary.com/dwyzrynk5/image/upload/v1735806080/baloons_wthzai.avif" alt="Imagen de globos de cumpleaños" class="header-image">
+            <p>Never forget an important birthday!</p>
+            <img src="https://res.cloudinary.com/dwyzrynk5/image/upload/v1735806080/baloons_wthzai.avif" alt="Birthday balloons image" class="header-image">
         </header>
 
         <section class="form-section">
-            <h2>Añadir Cumpleaños</h2>
+            <h2>Add Birthday</h2>
             <form id="add-birthday-form">
                 <div class="form-group">
-                    <input type="text" id="name" placeholder="Nombre" required>
+                    <input type="text" id="name" placeholder="Name" required>
                     <input type="date" id="date" required>
                 </div>
-                <button type="submit" class="submit-btn">Añadir Cumpleaños</button>
+                <button type="submit" class="submit-btn">Add Birthday</button>
             </form>
         </section>
 
         <section class="display-section">
-            <h2>Lista de Cumpleaños 🍰</h2>
+            <h2>Birthday List 🍰</h2>
             <ul id="birthdays-list"></ul>
         </section>
 
         <section class="actions">
-            <button id="generate-ics" class="action-btn">Generar .ics 📥</button>
+            <button id="generate-ics" class="action-btn">Generate .ics 📥</button>
+        </section>
 
         <section class="update-section">
-            <h2>Actualizar Lista</h2>
+            <h2>Update List</h2>
             <div class="upload-section">
-                <!-- <label for="upload-ics">Seleccionar archivo .ics:</label> -->
+                <!-- <label for="upload-ics">Select .ics file:</label> -->
                 <input type="file" id="upload-ics" accept=".ics">
-                <button id="upload-btn" class="action-btn">Subir 📂</button>
+                <button id="upload-btn" class="action-btn">Upload 📂</button>
             </div>
         </section>
 
@@ -46,7 +47,7 @@
     </div>
 
     <footer>
-        <p>Hecho por <strong>Juan Pablo Bertone</strong> y <strong>ChatGPT</strong> - 2024 🚀</p>
+        <p>Made by <strong>Juan Pablo Bertone</strong> and <strong>ChatGPT</strong> - 2024 🚀</p>
     </footer>
 
     <script src="script.js"></script>
